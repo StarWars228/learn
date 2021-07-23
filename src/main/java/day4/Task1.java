@@ -11,37 +11,37 @@ public class Task1 {
 
         Random random = new Random();
 
-        int [] array = new int [arrayLength];
-        for(int i = 0; i < array.length; i++)
+        int[] array = new int[arrayLength];
+        for (int i = 0; i < array.length; i++)
             array[i] = random.nextInt(10);
-            
-            System.out.println(Arrays.toString(array));
-            System.out.println("Длинна массива: " + array.length);
 
-            int counter8 = 0;
-            for (int i = 0; i < array.length; i++) {
-                if(array[i] > 8)
+        System.out.println(Arrays.toString(array));
+        System.out.println("Длинна массива: " + array.length);
+
+        int counter8 = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > 8)
                 counter8++;
-            }
-            System.out.println("Количество чисел больше 8: " + counter8);
+        }
+        System.out.println("Количество чисел больше 8: " + counter8);
 
         int counter1 = 0;
         for (int i = 0; i < array.length; i++) {
-            if(array[i] == 1)
+            if (array[i] == 1)
                 counter1++;
         }
-            System.out.println("Количество чисел равных 1: " + counter1);
+        System.out.println("Количество чисел равных 1: " + counter1);
 
         int counterEven = 0;
         for (int i = 0; i < array.length; i++) {
-            if(array[i] % 2 == 0)
+            if (array[i] % 2 == 0)
                 counterEven++;
         }
         System.out.println("Количество четных чисел: " + counterEven);
 
         int counterNoEven = 0;
         for (int i = 0; i < array.length; i++) {
-            if(array[i] % 2 != 0)
+            if (array[i] % 2 != 0)
                 counterNoEven++;
         }
         System.out.println("Количество нечетных чисел: " + counterNoEven);

@@ -1,58 +1,43 @@
 package day4;
-
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
-
 public class Task2 {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        int vvod = scanner.nextInt();
-
+        int[] array = new int[100];
         Random random = new Random();
 
-        int[] array = new int[vvod];
         for (int i = 0; i < array.length; i++)
-            array[i] = random.nextInt(10);
+            array[i] = random.nextInt(10000);
 
-        System.out.print(Arrays.toString(array));
-        System.out.println();
+        System.out.println(Arrays.toString(array)); // вывожу массив в консоль
 
-        System.out.println("Длинна массива: " + array.length);
-
-        int counter8 = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > 8)
-                counter8++;
+        int max = 0;
+        for (int element : array) {
+            if (element > max)
+                max = element;
         }
-        System.out.println("Сумма чисел больше 8: " + counter8);
+        System.out.println(max + " - максимальное значение");
 
-        int counter0 = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == 1)
-                counter0++;
+        int min = 10000;
+        for (int element1 : array) {
+            if (element1 < min)
+                min = element1;
         }
-        System.out.println("Сумма чисел равных 1: " + counter0);
+        System.out.println(min + " - минимальное значение");
 
-        int counterEleven = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 0)
-                counterEleven++;
+        int counter = 0;
+        for (int element: array){
+            if(element % 10 == 0)
+                counter++;
         }
-        System.out.println("Количесто четных чисел: " + counterEleven);
-
-        int counterAdd = 0;
-        for (int i = 0; i < array.length; i++){
-            if ( array[i] % 2 != 0)
-                counterAdd++;
-        }
-        System.out.println("Количество нечетных чисел: " + counterAdd);
+        System.out.println(counter + " - кол-во чесел на конце 0");
 
         int sum = 0;
-        for(int i = 0; i < array.length; i++){
-            sum = sum + array[i];
+        for(int sumMax : array){
+            if (sumMax % 10 == 0)
+                sum = sumMax + sum;
         }
-        System.out.println("Сумма всех чисел массива " + sum);
+        System.out.println(sum + " - сумма элементов оканчивающихся на 0");
     }
 }
