@@ -2,7 +2,12 @@ package day5;
 
 public class Task1 {
     public static void main(String[] args) {
+        Car car = new Car();
+        car.setColor("Black");
+        car.setModel("Opel");
+        car.setYear(2020);
 
+<<<<<<< HEAD
         Car ford = new Car();
         ford.setYearRelease(1958);
         ford.setColorCar("Red");
@@ -44,3 +49,8 @@ public class Task1 {
                 System.out.println("Дата выпуска: " + yearRelease + " Цвет авто: " + colorCar + " Модель авто: " + model);
             }
         }
+=======
+        System.out.println(" Model car: " + car.getModel() + " \n Color car: " + car.getColor() + "\n Year car: " + car.getYear());
+    }
+}
+>>>>>>> ca2de84 (day 6)
