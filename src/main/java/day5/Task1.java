@@ -1,56 +1,16 @@
 package day5;
 
 public class Task1 {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Car car = new Car();
+        car.setModel("GTZ");
         car.setColor("Black");
-        car.setModel("Opel");
-        car.setYear(2020);
+        car.setYear(2010);
 
-<<<<<<< HEAD
-        Car ford = new Car();
-        ford.setYearRelease(1958);
-        ford.setColorCar("Red");
-        ford.setModel("Mustang GT");
+        System.out.println(car.getColor() + " "  + car.getYear() + " " + car.getModel());
 
-        Car mustang = new Car();
-        mustang.setModel("Mustang 770");
-        mustang.setColorCar("Оранжевый");
-        mustang.setYearRelease(1980);
+        Bike bike = new Bike("Red", "Honda", 2021);
 
-        ford.getInfo();
-        mustang.getInfo();
+        System.out.println(bike.getYear() + " " + bike.getModel() + " " +  bike.getColor());
     }
 }
-        class Car {
-           private int yearRelease;
-           private String colorCar;
-           private String model;
-
-            public void setYearRelease(int yearRelease) {
-                this.yearRelease = yearRelease;
-            }
-            public void setColorCar(String colorCar) {
-                this.colorCar = colorCar;
-            }
-            public void setModel(String model) {
-                this.model = model;
-            }
-            public int getYearRelease() {
-                return yearRelease;
-            }
-            public String getColorCar() {
-                return colorCar;
-            }
-            public String getModel() {
-                return model;
-            }
-            public void getInfo() {
-                System.out.println("Дата выпуска: " + yearRelease + " Цвет авто: " + colorCar + " Модель авто: " + model);
-            }
-        }
-=======
-        System.out.println(" Model car: " + car.getModel() + " \n Color car: " + car.getColor() + "\n Year car: " + car.getYear());
-    }
-}
->>>>>>> ca2de84 (day 6)
